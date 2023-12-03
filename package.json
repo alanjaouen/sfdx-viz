@@ -6,7 +6,8 @@
     "@oclif/core": "^3.11.0",
     "@salesforce/core": "^6",
     "@salesforce/sf-plugins-core": "^5.0.1",
-    "graphology": "^0.25.4"
+    "graphology": "^0.25.4",
+    "graphology-types": "^0.24.7"
   },
   "devDependencies": {
     "@oclif/plugin-command-snapshot": "^5.0.2",
