@@ -110,36 +110,41 @@ sf plugins
 ## Commands
 
 <!-- commands -->
+* [`sf viz project dependencies`](#sf-viz-project-dependencies)
 
-- [`sf hello world`](#sf-hello-world)
+## `sf viz project dependencies`
 
-## `sf hello world`
-
-Say hello either to the world or someone you know.
+Format dependencies.
 
 ```
 USAGE
-  $ sf hello world [--json] [-n <value>]
+  $ sf viz project dependencies [--json] [--format mermaid|visJs] [--output <value>]
 
 FLAGS
-  -n, --name=<value>  [default: World] The name of the person you'd like to say hello to.
+  --format=<option>  [default: mermaid] The format that you want the graph to be rendered.
+                     <options: mermaid|visJs>
+  --output=<value>   [default: graph.html] Path to the output file
 
 GLOBAL FLAGS
   --json  Format output as json.
 
 DESCRIPTION
-  Say hello either to the world or someone you know.
+  Format dependencies.
 
-  Say hello either to the world or someone you know.
+  Display your project dependencies in a human readeable format.
 
 EXAMPLES
   Say hello to the world:
 
-    $ sf hello world
+    $ sf viz project dependencies
 
   Say hello to someone you know:
 
-    $ sf hello world --name Astro
-```
+    $ sf viz project dependencies --name Astro
 
+FLAG DESCRIPTIONS
+  --format=mermaid|visJs  The format that you want the graph to be rendered.
+
+    Only mermaid is currently available.
+```
 <!-- commandsstop -->
