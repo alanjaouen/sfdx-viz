@@ -1,4 +1,4 @@
-# viz
+# sfdx-viz
 
 [![NPM](https://img.shields.io/npm/v/viz.svg?label=viz)](https://www.npmjs.com/package/viz) [![Downloads/week](https://img.shields.io/npm/dw/viz.svg)](https://npmjs.org/package/viz) [![License](https://img.shields.io/badge/License-BSD%203--Clause-brightgreen.svg)](https://raw.githubusercontent.com/salesforcecli/viz/main/LICENSE.txt)
 
