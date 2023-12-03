@@ -1,6 +1,6 @@
 import { execCmd, TestSession } from '@salesforce/cli-plugins-testkit';
 import { expect } from 'chai';
-import { HelloWorldResult } from '../../../src/commands/hello/world.js';
+import Dependencies from '../../../src/commands/viz/project/dependencies.js';
 
 let testSession: TestSession;
 
@@ -14,14 +14,22 @@ describe('hello world NUTs', () => {
   });
 
   it('should say hello to the world', () => {
-    const result = execCmd<HelloWorldResult>('hello world --json', { ensureExitCode: 0 }).jsonOutput?.result;
-    expect(result?.name).to.equal('World');
+    let exceptionThrown: boolean = false;
+    try {
+      execCmd<Dependencies>('viz project dependencies --json', { ensureExitCode: 0 }).jsonOutput?.result;
+    } catch (e) {
+      exceptionThrown = true;
+    }
+    if (!exceptionThrown) {
+      expect.fail('Expected to throw');
+    }
+    // expect(result?.name).to.equal('World');
   });
 
-  it('should say hello to a given person', () => {
-    const result = execCmd<HelloWorldResult>('hello world --name Astro --json', {
-      ensureExitCode: 0,
-    }).jsonOutput?.result;
-    expect(result?.name).to.equal('Astro');
-  });
+  // it('should say hello to a given person', () => {
+  //   const result = execCmd<HelloWorldResult>('hello world --name Astro --json', {
+  //     ensureExitCode: 0,
+  //   }).jsonOutput?.result;
+  //   expect(result?.name).to.equal('Astro');
+  // });
 });

@@ -8,10 +8,9 @@ import { MermaidPrinter } from '../../../impl/MermaidPrinter.js';
 import { VisJsPrinter } from '../../../impl/VisJsPrinter.js';
 
 Messages.importMessagesDirectory(dirname(fileURLToPath(import.meta.url)));
-const messages = Messages.loadMessages('viz', 'vis.project.dependencies');
+const messages = Messages.loadMessages('sfdx-viz', 'vis.project.dependencies');
 
 export default class Dependencies extends SfCommand<object> {
-
   public static readonly summary = messages.getMessage('summary');
   public static readonly description = messages.getMessage('description');
   public static readonly examples = messages.getMessages('examples');
@@ -57,20 +56,21 @@ export default class Dependencies extends SfCommand<object> {
     return {};
   }
 
-  private async getProjectAsGaph(): Promise<DirectedGraph> { // eslint-disable-line class-methods-use-this
+  // eslint-disable-next-line
+  private async getProjectAsGaph(): Promise<DirectedGraph> {
     const project = await SfProject.resolve();
     const projectJson = await project.retrieveSfProjectJson();
     const packageDirectories = await projectJson.getPackageDirectories();
 
     const graph = new Graph.DirectedGraph();
 
-    packageDirectories.forEach(element => {
+    packageDirectories.forEach((element) => {
       // add or update package node
       graph.updateNode(element.package, () => element);
 
       // add dependencies node if not found
       const dependencies: PackageDirDependency[] = element.dependencies ?? [];
-      dependencies.forEach(dependency => {
+      dependencies.forEach((dependency) => {
         if (!graph.hasNode(dependency.package)) {
           graph.addNode(dependency.package);
         }
