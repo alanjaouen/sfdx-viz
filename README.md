@@ -1,6 +1,6 @@
 # sfdx-viz
 
-[![NPM](https://img.shields.io/npm/v/viz.svg?label=viz)](https://www.npmjs.com/package/viz) [![Downloads/week](https://img.shields.io/npm/dw/viz.svg)](https://npmjs.org/package/viz) [![License](https://img.shields.io/badge/License-BSD%203--Clause-brightgreen.svg)](https://raw.githubusercontent.com/salesforcecli/viz/main/LICENSE.txt)
+[![NPM](https://img.shields.io/npm/v/sfdx-viz.svg?label=sfdx-viz)](https://www.npmjs.com/package/sfdx-viz) [![Downloads/week](https://img.shields.io/npm/dw/sfdx-viz.svg)](https://npmjs.org/package/sfdx-viz) [![License](https://img.shields.io/badge/License-BSD%203--Clause-brightgreen.svg)](https://raw.githubusercontent.com/salesforcecli/sfdx-viz/main/LICENSE.txt)
 
 ## Using the template
 
@@ -53,7 +53,7 @@ We always recommend using the latest version of these commands bundled with the 
 ## Install
 
 ```bash
-sf plugins install viz@x.y.z
+sf plugins install sfdx-viz@x.y.z
 ```
 
 ## Issues
@@ -85,7 +85,7 @@ To build the plugin locally, make sure to have yarn installed and run the follow
 
 ```bash
 # Clone the repository
-git clone git@github.com:salesforcecli/viz
+git clone git@github.com:salesforcecli/sfdx-viz
 
 # Install the dependencies and compile
 yarn && yarn build
