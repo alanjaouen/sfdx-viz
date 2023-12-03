@@ -1,3 +1,12 @@
+## [1.0.3](https://github.com/alanjaouen/sfdx-viz/compare/1.0.2...1.0.3) (2023-12-03)
+
+
+### Bug Fixes
+
+* **deps:** bump @salesforce/sf-plugins-core from 5.0.1 to 5.0.5 ([274dde9](https://github.com/alanjaouen/sfdx-viz/commit/274dde90b7c2b9d73d3446deed10f83c5e9c8651))
+
+
+
 ## [1.0.2](https://github.com/alanjaouen/sfdx-viz/compare/1.0.1...1.0.2) (2023-12-03)
 
 
