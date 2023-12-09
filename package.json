@@ -5,7 +5,7 @@
   "dependencies": {
     "@oclif/core": "^3.13.1",
     "@salesforce/core": "^6",
-    "@salesforce/sf-plugins-core": "^5.0.5",
+    "@salesforce/sf-plugins-core": "^5.0.8",
     "graphology": "^0.25.4",
     "graphology-types": "^0.24.7"
   },
