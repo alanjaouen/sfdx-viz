@@ -3,7 +3,7 @@
   "description": "this is a description",
   "version": "1.0.3",
   "dependencies": {
-    "@oclif/core": "^3.13.1",
+    "@oclif/core": "^3.18.1",
     "@salesforce/core": "^6",
     "@salesforce/sf-plugins-core": "^5.0.5",
     "graphology": "^0.25.4",
